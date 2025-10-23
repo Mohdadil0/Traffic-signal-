@@ -1,0 +1,49 @@
+.traffic-light {
+  background: #222;
+  width: 80px;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.light {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0.3;
+  box-shadow: 0 0 10px #000;
+}
+
+.red {
+  background: red;
+  animation: redLight 6s infinite;
+}
+
+.yellow {
+  background: yellow;
+  animation: yellowLight 6s infinite;
+}
+
+.green {
+  background: green;
+  animation: greenLight 6s infinite;
+}
+
+@keyframes redLight {
+  0%, 20% { opacity: 1; }
+  21%, 100% { opacity: 0.3; }
+}
+
+@keyframes yellowLight {
+  0%, 20% { opacity: 0.3; }
+  21%, 40% { opacity: 1; }
+  41%, 100% { opacity: 0.3; }
+}
+
+@keyframes greenLight {
+  0%, 40% { opacity: 0.3; }
+  41%, 100% { opacity: 1; }
+}
